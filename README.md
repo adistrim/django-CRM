@@ -11,8 +11,7 @@ Django-CRM is a basic customer relationship management (CRM) project built using
 
 ## Getting Started
 
-1. Install dependencies:
-```pip install -r requirements.txt```
+1. Install [docker](https://docs.docker.com/install/) on your machine.
 
 2. Create a .env file in the root directory:
 
@@ -24,17 +23,12 @@ DB_PASSWORD=your_password
 DB_HOST=localhost
 ```
 
-3. Apply database migrations:
-```python manage.py migrate```
+3. Build and run the Docker containers. This might take a while.
 
-4. Create a superuser: 
-```python manage.py createsuperuser```
+```
+docker compose up --build
+```
 
-5. Run the mydb.py file: 
-```python mydb.py```
-
-6. Run the dev server:
-```python manage.py runserver```
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://www.mit.edu/~amini/LICENSE.md) file for details.

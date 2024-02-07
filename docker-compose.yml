@@ -1,0 +1,13 @@
+version: '3'
+services:
+  django:
+    hostname: django
+    build:
+      context: ./
+      dockerfile: docker/dev/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
